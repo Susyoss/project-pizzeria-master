@@ -477,4 +477,4 @@
 
   app.init();
   app.initCart();
-}
+
