@@ -476,5 +476,4 @@
   };
 
   app.init();
-  app.initCart();
 }
