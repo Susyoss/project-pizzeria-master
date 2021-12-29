@@ -336,7 +336,7 @@
     }
     }
 
-  }
+  
 
   class AmountWidget{
     constructor(element){
@@ -477,4 +477,4 @@
 
   app.init();
   app.initCart();
-
+}
