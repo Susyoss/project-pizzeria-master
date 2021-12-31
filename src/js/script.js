@@ -79,8 +79,6 @@
       defaultDeliveryFee: 20,
     },
     // CODE ADDED END
-  };
-  
   db: {
     url: '//localhost:3131',
     products: 'products',
@@ -402,7 +400,6 @@
         event.preventDefault();
         thisWidget.setValue(thisWidget.value + 1);
       }); 
-    }
   }
   announce(){
     const thisWidget = this;
