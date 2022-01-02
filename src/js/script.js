@@ -1,4 +1,4 @@
-/* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
+/* global utils, dataSource */ // eslint-disable-line no-unused-vars
 
 //const { utils } = require("stylelint");
 
@@ -79,13 +79,13 @@
       defaultDeliveryFee: 20,
     },
     // CODE ADDED END
-  db: {
-    url: '//localhost:3131',
-    products: 'products',
-    orders: 'orders',
-  },
+    db: {
+      url: '//localhost:3131',
+      products: 'products',
+      orders: 'orders',
+    },
   // CODE ADDED END
-};
+  };
 
 
   const templates = {
@@ -341,7 +341,7 @@
       
       thisProduct.priceElem.innerHTML = price;
     }
-    }
+  }
 
   
 
@@ -400,17 +400,9 @@
         event.preventDefault();
         thisWidget.setValue(thisWidget.value + 1);
       }); 
-  }
-  announce(){
-    const thisWidget = this;
+    }
 
-    const event = new CustomEvent ('updated', {
-      bubbles: true
-    });
-    thisWidget.element.dispatchEvent(event);
   }
-
-}
 
   class Cart{
     constructor(element){
