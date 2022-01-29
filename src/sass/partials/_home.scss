@@ -1,213 +1,170 @@
-.home-page {
-    transform: opacity 500ms;
-  
-    &.loading {
-      opacity: 0.25;
+.home-wrapper {
+  margin: 40px auto;
+  padding: 60px;
+  border-radius: $radius;
+  background-color: $color-light;
+}
+
+.options{
+  display: flex;
+
+  .box{
+    width: 50%;
+    height: 100px;
+    margin: 2.5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+
+    h3 {
+      font-family: $font-header;
+      font-size: 26px;
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+      left: 65px;
+      bottom: 30px;
+      position: absolute;
+      color: white;
+      transition-duration: 1s;
     }
   }
-  
-  .home-page-wrapper {
-    margin: ($base-size * 3.5) auto;
-    padding: ($base-size * 6) ($base-size * 4);
-    background: $color-light;
-    border-bottom: 1px solid lighten($color-dark, 70%);
-    border-radius: $radius;
+
+  .box:hover h3 {
+    transform: translateY(-10px);
+    transition: 0.5s linear;
   }
-  
-  .home-nav {
-    display: flex;
+
+  .order-online{
+    background-image: url(../images/pizza-1.jpg);
+    color: $color-light;
+    cursor: pointer;
   }
-  
-  .btn-nav {
-    flex: 1 0 0;
+
+  .book-a-table{
+    background-image: url(../images/pizza-2.jpg);
+    color: $color-light;
+    cursor: pointer;
   }
-  
-  .btn-nav a img {
-    min-width: 150px;
-    height: 100px;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    vertical-align: middle;
-    border-radius: $radius;
-  }
-  
-  .btn-nav:first-of-type {
-    margin-right: 7px;
-  }
-  
-  .btn-nav a {
-    position: relative;
-  }
-  
-  .btn-nav a p {
+}
+
+.opening-hours{
+  width: 99%;
+  height: 100px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-main;
+  color: $color-light;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+  h3{
+    font-size: 26px;
+    font-family: $font-header;
     margin: 0;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    text-decoration: none;
-    z-index: 2;
-    width: 80%;
-    text-align: center;
   }
-  
-  .btn-nav a p:first-of-type {
-    top: -5px;
+
+  p {
+    font-size: 16px;
+    font-family: $font-text;
+    margin: 5px 0;
+  }
+}
+
+/* carousel */
+
+.main-carousel{
+  margin-top: 50px;
+}
+
+.carousel-cell{
+  width: 100%;
+  height: 240px;
+  display: flex;
+  font-size: 14px;
+
+  h3{
     text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
+    font-family: $font-header;
   }
-  
-  .btn-nav a p:last-of-type {
-    top: 45px;
-    font-size: 14px;
-    visibility: hidden;
+
+  p {
+    font-family: $font-text;
   }
-  
-  .btn-nav a:hover p:first-of-type {
-    top: -20px;
-    transition: top 1s;
-  }
-  
-  .btn-nav a:hover p:last-of-type {
-    top: 20px;
-    transition: top 1s;
-    visibility: visible;
-  }
-  
-  .info {
-    background: $color-main;
-    border-radius: $radius;
-    color: #fff;
-    text-transform: uppercase;
-    margin-top: 7px;
-    // min-height: 100px;
-    margin-bottom: 20px;
-  }
-  
-  .info h2 {
-    margin: 0;
-    text-align: center;
-    padding-top: 20px;
-  }
-  
-  .info p {
-    margin: 0;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  
-  .main-carousel {
-    font-size: 20px;
-    margin: 80px 0;
-  }
-  
-  .carousel-cell {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  .carousel-cell img {
-    flex: 1 0 0;
-    min-width: 100px;
-    min-height: 200px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    //overflow: hidden;
-    vertical-align: middle;
-  }
-  
-  .carousel-cell .opinion {
-    flex: 2 0 0;
-    padding: 0 30px;
-  }
-  
-  .carousel-cell .opinion h3 {
-    font-size: 18px;
-  }
-  
-  .carousel-cell .opinion p {
-    font-size: 14px;
-  }
-  
-  .gallery {
-    margin-bottom: 30px;
-  }
-  
-  .row {
-    display: flex;
-  }
-  
-  .photo {
-    flex: 1 0 0;
-    position: relative;
-    margin-bottom: 10px;
+
+  img{
+    margin-top: 15px;
+    height: 180px;
     margin-right: 10px;
   }
-  
-  .photo:last-of-type {
-    margin-right: 0;
+}
+
+.flickity-button {
+  display: none;
+}
+
+/* gallery */
+.gallery{
+  margin-top: 80px;
+}
+
+.gallery-row {
+  margin: 0 0 5px 0;
+  width: 600px;
+  display: flex;
+}
+
+.gallery-image {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+
+  img {
+    width: 98%;
+    height: 98%;
   }
-  
-  .photo:hover::after {
+}
+
+.gallery-layer {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  background-color: rgba(1,1,1,0.3);
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  margin: 5px;
+  font-size: 25px;
+}
+
+.logo:hover{
+  color: $color-main;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.gallery-layer-button {
+  color: $color-light;
+  font-family: $font-text;
+}
+
+.gallery-image:hover {
+  .gallery-layer {
     visibility: visible;
   }
-  
-  .photo:hover a {
-    visibility: visible;
-    font-size: 24px;
-    transition: font-size 0.5s ease-out;
-  }
-  
-  .photo::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: $color-dark;
-    opacity: 0.4;
-    visibility: hidden;
-  }
-  
-  .photo img {
-    min-width: 150px;
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    vertical-align: middle;
-    border-radius: $radius;
-  }
-  
-  .photo a {
-    position: absolute;
-    color: #fff;
-    font-size: 0;
-    z-index: 2;
-    visibility: hidden;
-  }
-  
-  .photo a:hover {
-    color: $color-main;
-  }
-  
-  .photo a:first-of-type {
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .photo a:last-of-type {
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .footer a {
-    color: $color-main;
-  }
+}
