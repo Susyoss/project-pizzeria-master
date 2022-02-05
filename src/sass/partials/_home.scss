@@ -1,243 +1,213 @@
-.home-container {
-  margin: ($base-size * 3.5) auto;
-  padding: ($base-size * 6) ($base-size * 4);
-  background: $color-light;
-  border-bottom: 1px solid lighten($color-dark, 70%);
-  border-radius: $radius;
-  max-width: 700px;
-
-}
-
-.home-widget {
+.home-page {
   transform: opacity 500ms;
-  font-family: $font-header;
-  max-width: 100%;
 
   &.loading {
     opacity: 0.25;
   }
 }
 
-.start {
-  display: flex;
-}
-
-img {
-  position: relative;
-  width: 299px;
-  height: 110px;
-  margin-right: 5px;
-  z-index: 5;
-  object-fit: cover;
-  padding-bottom: 5px;
-}
-
-
-.text {
-  position: absolute;
-  z-index: 10;
-
-
-  a {
-    text-decoration: none;
-  }
-
-  h2 {
-    font-size: 26px;
-    color: $color-light;
-    text-align: center;
-    padding-left: 50px ;
-    
-  
-
-  }
-
-  p {
-    font-size: 14px;
-    font-family: $font-text;
-    opacity: 0;
-    color: $color-light;
-    text-align: center;
-    padding-left: 30px;
-  }
-
-  &:hover {
-    margin-top: -30px;
-    transition: 1s ease;
-
-    p {
-      opacity: 1;
-      
-    }
-  }
-}
-
-
-.open-hours {
-  margin-top: -25px;
-  text-align: center;
-  background: #FF6B6B;
-  color: $color-light;
-  width: 604px;
-  height: 120px;
-
-  h3 {
-    font-size: 26px;
-    margin-bottom: -10px;
-    padding-top: 15px;
-  }
-
-  p {
-    font-family: $font-text;
-    font-size: 14px;
-    
-  
-  }
-}
-
-.carousel {
-  width: 100%;
-  margin: 0 auto;
-  padding: ($base-size * 4) ($base-size * 2);
+.home-page-wrapper {
+  margin: ($base-size * 3.5) auto;
+  padding: ($base-size * 6) ($base-size * 4);
   background: $color-light;
   border-bottom: 1px solid lighten($color-dark, 70%);
   border-radius: $radius;
-  max-width: 700px;
-  
 }
 
-.carousel-cell {
-  //padding-top: 30px;
+.home-nav {
+  display: flex;
+}
+
+.btn-nav {
+  flex: 1 0 0;
+}
+
+.btn-nav a img {
+  min-width: 150px;
+  height: 100px;
   width: 100%;
-  height: 250px;
-  //margin-right: 0 auto;
-  background: $color-light;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
+  object-fit: cover;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: $radius;
 }
 
-.carousel-cell::before{
+.btn-nav:first-of-type {
+  margin-right: 7px;
+}
+
+.btn-nav a {
+  position: relative;
+}
+
+.btn-nav a p {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-decoration: none;
+  z-index: 2;
+  width: 80%;
+  text-align: center;
+}
+
+.btn-nav a p:first-of-type {
+  top: -5px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn-nav a p:last-of-type {
+  top: 45px;
+  font-size: 14px;
   visibility: hidden;
 }
 
+.btn-nav a:hover p:first-of-type {
+  top: -20px;
+  transition: top 1s;
+}
 
-.carousel-img {
-  width: 200px;
-  height: 200px;
+.btn-nav a:hover p:last-of-type {
+  top: 20px;
+  transition: top 1s;
+  visibility: visible;
+}
+
+.info {
+  background: $color-main;
+  border-radius: $radius;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 7px;
+  // min-height: 100px;
+  margin-bottom: 20px;
+}
+
+.info h2 {
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.info p {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.main-carousel {
+  font-size: 20px;
+  margin: 80px 0;
+}
+
+.carousel-cell {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.carousel-cell img {
+  flex: 1 0 0;
+  min-width: 100px;
+  min-height: 200px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  margin-left: 15px;
-  margin-right: 30px;
-  margin-top: 15px;
-  float: left;
-  
+  //overflow: hidden;
+  vertical-align: middle;
 }
 
-.comment-text {
-
-  font-family: $font-text;
-  padding: 10px 30px 10px 0;
-
+.carousel-cell .opinion {
+  flex: 2 0 0;
+  padding: 0 30px;
 }
 
-.h6 {
-  font-family: italic;
+.carousel-cell .opinion h3 {
+  font-size: 18px;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background: transparent;
-  border: 2px solid white;
+.carousel-cell .opinion p {
+  font-size: 14px;
 }
 
 .gallery {
+  margin-bottom: 30px;
+}
+
+.row {
   display: flex;
-  margin-top: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
+}
 
-  .flex {
-    flex: 33%;
-    position: relative;
-    max-width: 180px;
-    background-color: grey;
-    margin: 8px;
+.photo {
+  flex: 1 0 0;
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
 
-    img{
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 3px;
+.photo:last-of-type {
+  margin-right: 0;
+}
 
-      display: block;
-    } 
+.photo:hover::after {
+  visibility: visible;
+}
 
-    .icons{
-      list-style-type: none;
-      position: absolute;
-      bottom: 26%;
-      left: 15%;
-      font-size: 25px;
-      z-index:20;
-          
-      li{
-        color: $color-light;
-        display: inline;
-        visibility: hidden;
-      }
-         
-    }
-      
-    .photo-container {
-      &:hover{
-        .fa-heart {
-          visibility: visible;
-          color: $color-light;
-          
-        }
-      }
-    }
+.photo:hover a {
+  visibility: visible;
+  font-size: 24px;
+  transition: font-size 0.5s ease-out;
+}
 
-    .photo-container {
-      &:hover{
-        .fa-share-alt {
-          visibility: visible;
-          color: $color-light;
-          
-        }
-      }
-      .icons{
-        &:hover .fa-heart {
-          color:$color-main;
-        }
-      }
-    }
-  }
+.photo::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: $color-dark;
+  opacity: 0.4;
+  visibility: hidden;
+}
 
-  .photo-container{
-    &:hover{
-      img {
-        opacity: 0.3;
-        transition: all 0.3s;
-      }
-    
-    }
-  }
-}  
+.photo img {
+  min-width: 150px;
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: $radius;
+}
 
+.photo a {
+  position: absolute;
+  color: #fff;
+  font-size: 0;
+  z-index: 2;
+  visibility: hidden;
+}
 
+.photo a:hover {
+  color: $color-main;
+}
 
+.photo a:first-of-type {
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
 
-footer {
-  a {
-    text-decoration: none;
-  }
+.photo a:last-of-type {
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
 
-  .footer {
-    font-family: $font-text;
-    font-size: 14px;
-    color: #f10b58;
-    text-decoration: underline;
-  }
+.footer a {
+  color: $color-main;
 }
