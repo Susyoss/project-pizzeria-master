@@ -94,6 +94,21 @@ $base-size: 12px;
 
   80% {
     transform: rotateX(8deg);
+  }
+  
+  83% {
+    transform: rotateX(6deg);
+  }
+  
+  92% {
+    transform: rotateX(-3deg);
+  }
+  
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
 
 .home-container {
   margin: ($base-size * 3.5) auto;
