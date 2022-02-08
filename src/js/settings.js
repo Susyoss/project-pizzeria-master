@@ -104,6 +104,9 @@ export const classNames = {
     
 export const settings = {
   db: {
+    // url: '//localhost:3131',
+    products: 'products',
+    orders: 'orders',
     url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     products: 'products',
     orders: 'orders',
