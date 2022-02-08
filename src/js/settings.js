@@ -108,8 +108,6 @@ export const settings = {
     products: 'products',
     orders: 'orders',
     url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
-    products: 'products',
-    orders: 'orders',
     product: 'product',
     order: 'order',
     booking: 'bookings',
