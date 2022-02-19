@@ -98,6 +98,24 @@
   padding-bottom: 20px;
 }
 
+.titles {
+  display: flex;
+}
+
+.title {
+  width: 50%;
+  padding-left: 16px;
+}
+
+.titles img {
+  width: 100%;
+}  
+
+.bottom {
+  background-color:pink;
+  text-align: center;
+}   
+
 .main-carousel {
   font-size: 20px;
   margin: 80px 0;
@@ -110,7 +128,7 @@
 
 .carousel-cell img {
   flex: 1 0 0;
-  min-width: 100px;
+  min-width: 200px;
   min-height: 200px;
   height: 100%;
   width: 100%;
@@ -155,7 +173,7 @@
   visibility: visible;
 }
 
-.photo:hover a {
+.photo:hover i {
   visibility: visible;
   font-size: 24px;
   transition: font-size 0.5s ease-out;
@@ -183,25 +201,25 @@
   border-radius: $radius;
 }
 
-.photo a {
+.photo i {
   position: absolute;
   color: #fff;
   font-size: 0;
-  z-index: 2;
+  z-index: 20;
   visibility: hidden;
 }
 
-.photo a:hover {
+.photo i:hover {
   color: $color-main;
 }
 
-.photo a:first-of-type {
+.photo i:first-of-type {
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
 }
 
-.photo a:last-of-type {
+.photo i:last-of-type {
   top: 50%;
   left: 60%;
   transform: translate(-50%, -50%);
